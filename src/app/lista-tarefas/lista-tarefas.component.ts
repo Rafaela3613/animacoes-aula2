@@ -5,7 +5,6 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { TarefaService } from 'src/app/service/tarefa.service';
 import { Tarefa } from '../interface/tarefa';
 import { checkButtonTrigger, filterTrigger, formButtonTrigger, highlightedStateTrigger, shownStateTrigger } from '../animations';
-import { includes } from 'lodash';
 
 @Component({
   selector: 'app-lista-tarefas',
@@ -21,20 +20,22 @@ import { includes } from 'lodash';
 })
 export class ListaTarefasComponent implements OnInit {
   listaTarefas: Tarefa[] = [];
-  formAberto: boolean = true;
+  formAberto: boolean = false;
   categoria: string = '';
   validado: boolean = false;
   indexTarefa: number = -1;
   id: number = 0;
-  campoBusca: string = '';
+  campoBusca = '';
   tarefasFiltradas: Tarefa[] = [];
+
   formulario: FormGroup = this.fomBuilder.group({
-  id: [0],
-  descricao: ['', Validators.required],
-  statusFinalizado: [false, Validators.required],
-  categoria: ['Casa', Validators.required],
-  prioridade: ['Alta', Validators.required],
+    id: [0],
+    descricao: ['', Validators.required],
+    statusFinalizado: [false, Validators.required],
+    categoria: ['', Validators.required],
+    prioridade: ['', Validators.required],
   });
+
   constructor(
     private service: TarefaService,
     private router: Router,
@@ -45,11 +46,9 @@ export class ListaTarefasComponent implements OnInit {
     this.service.listar(this.categoria).subscribe((listaTarefas) => {
       this.listaTarefas = listaTarefas;
       this.tarefasFiltradas = listaTarefas;
-
     });
     return this.tarefasFiltradas;
   }
-
 
   filtrarTarefasPorDescricao(descricao: string) {
     this.campoBusca = descricao.trim().toLowerCase();
