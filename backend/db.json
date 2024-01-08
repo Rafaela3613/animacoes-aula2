@@ -52,7 +52,7 @@
     {
       "id": 10,
       "descricao": "sfsf",
-      "statusFinalizado": false,
+      "statusFinalizado": true,
       "categoria": "Casa",
       "prioridade": "Normal"
     }
