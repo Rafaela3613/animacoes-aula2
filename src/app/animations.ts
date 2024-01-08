@@ -51,7 +51,7 @@ export const filterTrigger = trigger('filterAnimation', [
       style({offset: 1, opacity:1, width:'*'})
     ]))
   ]),
-  transition(':leave', [
-    animate('200ms cubic-bezier(.13,.9,.8,.1)', style({ opacity: 0, width: 0}))
-  ])
+transition(':leave', [
+  animate('400ms cubic-bezier(.13,.9,.8,.1)', style({ opacity: 0, width: 0}))
+])
 ])
