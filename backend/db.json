@@ -8,13 +8,6 @@
       "prioridade": "Baixa"
     },
     {
-      "id": 2,
-      "descricao": "Estudar sobre acessibilidade",
-      "categoria": "Trabalho",
-      "statusFinalizado": false,
-      "prioridade": "Normal"
-    },
-    {
       "id": 4,
       "descricao": "Preencher formulário de inscrição",
       "categoria": "Trabalho",
@@ -55,6 +48,13 @@
       "statusFinalizado": false,
       "categoria": "Estudos",
       "prioridade": "Alta"
+    },
+    {
+      "id": 10,
+      "descricao": "sfsf",
+      "statusFinalizado": false,
+      "categoria": "Casa",
+      "prioridade": "Normal"
     }
   ]
 }
