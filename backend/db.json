@@ -1,0 +1,60 @@
+{
+  "tarefas": [
+    {
+      "id": 1,
+      "descricao": "Ir ao supermercado",
+      "categoria": "Casa",
+      "statusFinalizado": true,
+      "prioridade": "Baixa"
+    },
+    {
+      "id": 2,
+      "descricao": "Estudar sobre acessibilidade",
+      "categoria": "Trabalho",
+      "statusFinalizado": false,
+      "prioridade": "Normal"
+    },
+    {
+      "id": 4,
+      "descricao": "Preencher formulário de inscrição",
+      "categoria": "Trabalho",
+      "statusFinalizado": true,
+      "prioridade": "Normal"
+    },
+    {
+      "id": 5,
+      "descricao": "Trocar lâmpada",
+      "categoria": "Casa",
+      "statusFinalizado": true,
+      "prioridade": "Alta"
+    },
+    {
+      "id": 6,
+      "descricao": "Ler",
+      "categoria": "Estudos",
+      "statusFinalizado": false,
+      "prioridade": "Normal"
+    },
+    {
+      "id": 7,
+      "descricao": "Alimentar os gatos",
+      "categoria": "Casa",
+      "statusFinalizado": true,
+      "prioridade": "Alta"
+    },
+    {
+      "id": 8,
+      "descricao": "Criar animação de check",
+      "categoria": "Trabalho",
+      "statusFinalizado": true,
+      "prioridade": "Normal"
+    },
+    {
+      "id": 9,
+      "descricao": "Fazer curso de animações",
+      "statusFinalizado": false,
+      "categoria": "Estudos",
+      "prioridade": "Alta"
+    }
+  ]
+}
