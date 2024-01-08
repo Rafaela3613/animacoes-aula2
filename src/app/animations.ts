@@ -55,3 +55,17 @@ transition(':leave', [
   animate('400ms cubic-bezier(.13,.9,.8,.1)', style({ opacity: 0, width: 0}))
 ])
 ])
+
+export const formButtonTrigger = trigger('formButton', [
+  transition('invalid => valid', [
+    animate(200, style({
+      backgroundColor: '#63B77C'
+    })),
+    animate(100, style({
+      transform: 'scale(1.1)'
+    })),
+    animate(200, style({
+      transform: 'scale(1)'
+    }))
+  ])
+])

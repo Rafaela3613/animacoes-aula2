@@ -4,7 +4,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 import { TarefaService } from 'src/app/service/tarefa.service';
 import { Tarefa } from '../interface/tarefa';
-import { checkButtonTrigger, filterTrigger, highlightedStateTrigger, shownStateTrigger } from '../animations';
+import { checkButtonTrigger, filterTrigger, formButtonTrigger, highlightedStateTrigger, shownStateTrigger } from '../animations';
 import { includes } from 'lodash';
 
 @Component({
@@ -15,27 +15,26 @@ import { includes } from 'lodash';
     highlightedStateTrigger,
     shownStateTrigger,
     checkButtonTrigger,
-    filterTrigger
+    filterTrigger,
+    formButtonTrigger
   ]
 })
 export class ListaTarefasComponent implements OnInit {
   listaTarefas: Tarefa[] = [];
-  formAberto: boolean = false;
+  formAberto: boolean = true;
   categoria: string = '';
   validado: boolean = false;
   indexTarefa: number = -1;
   id: number = 0;
   campoBusca: string = '';
   tarefasFiltradas: Tarefa[] = [];
-
   formulario: FormGroup = this.fomBuilder.group({
-    id: [0],
-    descricao: ['', Validators.required],
-    statusFinalizado: [false, Validators.required],
-    categoria: ['', Validators.required],
-    prioridade: ['', Validators.required],
+  id: [0],
+  descricao: ['', Validators.required],
+  statusFinalizado: [false, Validators.required],
+  categoria: ['Casa', Validators.required],
+  prioridade: ['Alta', Validators.required],
   });
-
   constructor(
     private service: TarefaService,
     private router: Router,

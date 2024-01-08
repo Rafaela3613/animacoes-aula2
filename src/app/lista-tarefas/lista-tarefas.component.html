@@ -48,12 +48,14 @@
     </app-mensagem>
     <div class="botoes-form">
       <button
-        (click)="salvarTarefa()"
-        class="botao-form"
-        [ngClass]="habilitarBotao()"
-        [disabled]="!formulario.valid">
-          Salvar
-      </button>
+      [@formButton]="formulario.valid ? 'valid' : 'invalid'"
+      id="botao-salvar"
+      (click)="salvarTarefa()"
+      class="botao-form"
+      [ngClass]="habilitarBotao()"
+      [disabled]="!formulario.valid">
+        Salvar
+    </button>
       <button
         (click)="cancelar()"
         class="botao-form botao-cancelar">
