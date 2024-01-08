@@ -78,6 +78,7 @@
       </div>
   <div *ngIf="tarefasFiltradas.length > 0, else semTarefas">
     <div
+    @filterAnimation
       class="lista-tarefas card-{{ tarefa.categoria }}"
       *ngFor="let tarefa of tarefasFiltradas; let i = index"
       (mouseover)="indexTarefa = i"
